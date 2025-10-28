@@ -47,7 +47,7 @@
         <Menu mnemonicParsing="false" text="Usuario">
           <items>
             <MenuItem mnemonicParsing="false" onAction="#switchToCadastroUsuario" text="Cadastrar " />
-            <MenuItem mnemonicParsing="false" text="Listar" />
+            <MenuItem mnemonicParsing="false" onAction="#switchToListarUsuario" text="Listar" />
             <MenuItem mnemonicParsing="false" text="Editar" />
             <MenuItem mnemonicParsing="false" text="Excluir" />
           </items>

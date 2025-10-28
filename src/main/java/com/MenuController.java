@@ -17,4 +17,8 @@ public class MenuController {
     public void switchToCadastroOperador() throws IOException {
         App.setRoot("CadastroOperador");
     }
+    
+    public void switchToListarUsuario() throws IOException {
+        App.setRoot("listarUsuario");
+    }
 }

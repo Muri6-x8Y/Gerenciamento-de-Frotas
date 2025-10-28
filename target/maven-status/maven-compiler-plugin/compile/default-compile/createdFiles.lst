@@ -3,5 +3,6 @@ com\App.class
 com\Motorista.class
 com\UsuarioController.class
 com\Dao.class
+com\ListarControler.class
 com\Usuario.class
 com\MenuController.class
