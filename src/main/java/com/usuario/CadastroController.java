@@ -1,11 +1,14 @@
-package com;
+package com.usuario;
 
+import com.App;
+import com.Dao;
+import com.Usuario;
 import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 
 
-public class UsuarioController {
+public class CadastroController {
     @FXML
     private TextField campoCodigo;
     @FXML

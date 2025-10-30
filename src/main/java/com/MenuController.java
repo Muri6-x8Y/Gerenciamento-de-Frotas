@@ -1,6 +1,5 @@
 package com;
-
-import com.App;
+import com.usuario.CadastroController;
 import java.io.IOException;
 import javafx.fxml.FXML;
 

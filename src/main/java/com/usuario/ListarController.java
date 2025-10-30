@@ -1,13 +1,19 @@
-package com;
+package com.usuario;
 
+import com.App;
+import com.Dao;
+import com.Usuario;
+import java.io.IOException;
 import java.util.List;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
-public class ListarControler {
+public class ListarController {
+    
     
     @FXML 
     private TableView<Usuario> listaUsuarios;
@@ -21,7 +27,7 @@ public class ListarControler {
     Dao<Usuario> dao = new Dao(Usuario.class);    
 
     @FXML 
-    void initialize(){
+   void initialize(){
         LoginColuna.setCellValueFactory(new PropertyValueFactory<>("login"));
         NomeColuna.setCellValueFactory(new PropertyValueFactory<>("nome"));
         SenhaColuna.setCellValueFactory(new PropertyValueFactory<>("senha"));
@@ -30,5 +36,10 @@ public class ListarControler {
         
         listaUsuarios.setItems(FXCollections.observableArrayList(usuarios));
     }
-        
+   
+    @FXML
+    private void Sair() throws IOException {
+        App.setRoot("menu");
+    }
+    
 }

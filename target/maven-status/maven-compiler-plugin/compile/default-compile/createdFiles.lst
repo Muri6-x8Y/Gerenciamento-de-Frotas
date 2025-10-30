@@ -1,8 +1,9 @@
 com\Veiculo.class
 com\App.class
 com\Motorista.class
-com\UsuarioController.class
 com\Dao.class
-com\ListarControler.class
+com\usuario\ListarController.class
+com\usuario\CadastroController.class
 com\Usuario.class
 com\MenuController.class
+com\GerenciarUsuario.class
