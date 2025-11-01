@@ -1,4 +1,4 @@
-package com;
+package com.usuario;
 
 public class Usuario {
 
@@ -40,4 +40,8 @@ public class Usuario {
         this.senha = senha;
     }
 
+    @Override
+    public String toString() {
+        return nome; 
+    }
 }

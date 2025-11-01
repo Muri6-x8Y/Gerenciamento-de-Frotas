@@ -4,19 +4,17 @@ import javafx.fxml.FXML;
 
 public class MenuController {
 
-    
-    
+     
     @FXML
     public void switchToCadastroUsuario() throws IOException {
-        App.setRoot("cadastroUsuario");
-    }
-
-    @FXML
-    public void switchToCadastroOperador() throws IOException {
-        App.setRoot("CadastroOperador");
+        App.setRoot("/com/telasUsuarios/" + "cadastroUsuarios");
     }
     
     public void switchToListarUsuario() throws IOException {
-        App.setRoot("listarUsuario");
+        App.setRoot("/com/telasUsuarios/" + "listarUsuarios");
+    }
+    
+    public void switchToGerenciarUsuarios() throws IOException {
+        App.setRoot("/com/telasUsuarios/" + "gerenciarUsuarios");
     }
 }

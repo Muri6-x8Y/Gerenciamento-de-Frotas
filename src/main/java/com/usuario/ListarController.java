@@ -2,7 +2,6 @@ package com.usuario;
 
 import com.App;
 import com.Dao;
-import com.Usuario;
 import java.io.IOException;
 import java.util.List;
 import javafx.collections.FXCollections;

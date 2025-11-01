@@ -46,7 +46,7 @@
           <items>
             <MenuItem mnemonicParsing="false" onAction="#switchToCadastroUsuario" text="Cadastrar " />
             <MenuItem mnemonicParsing="false" onAction="#switchToListarUsuario" text="Listar" />
-            <MenuItem mnemonicParsing="false" text="Gerenciar" />
+            <MenuItem mnemonicParsing="false" onAction="#switchToGerenciarUsuarios" text="Gerenciar" />
           </items>
         </Menu>
         <Menu mnemonicParsing="false" text="Motorista">
