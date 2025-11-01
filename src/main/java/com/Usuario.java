@@ -1,15 +1,16 @@
 package com;
 
-
-
 public class Usuario {
-    String codigo;
+
     String nome;
     String login;
     String senha;
 
-    public Usuario(String codigo, String nome,String login, String senha) {
-        this.codigo = codigo;
+    public Usuario() {
+
+    }
+
+    public Usuario(String nome, String login, String senha) {
         this.nome = nome;
         this.login = login;
         this.senha = senha;
@@ -21,18 +22,6 @@ public class Usuario {
 
     public void setLogin(String login) {
         this.login = login;
-    }
-    
-    public Usuario() {
-    
-    }
-
-    public String getCodigo() {
-        return codigo;
-    }
-
-    public void setCodigo(String codigo) {
-        this.codigo = codigo;
     }
 
     public String getNome() {
@@ -51,4 +40,4 @@ public class Usuario {
         this.senha = senha;
     }
 
-}   
+}

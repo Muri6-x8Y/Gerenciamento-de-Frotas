@@ -10,26 +10,28 @@ import javafx.scene.control.TextField;
 
 public class CadastroController {
     @FXML
-    private TextField campoCodigo;
-    @FXML
     private TextField campoNome;
     @FXML
     private TextField campoLogin;
     @FXML
     private TextField campoSenha;
     
+    Dao<Usuario> dao = new Dao(Usuario.class);
+    
     @FXML
     private void Cadastrar(){
         
         Usuario user = new Usuario();
-        user.setCodigo(campoCodigo.getText());
         user.setNome(campoNome.getText());
         user.setLogin(campoLogin.getText());
-        user.setNome(campoNome.getText());
         user.setSenha(campoSenha.getText());
         
-        Dao<Usuario> dao = new Dao(Usuario.class);
         dao.inserir(user);
+        campoLogin.clear(); 
+        campoNome.clear(); 
+        campoSenha.clear(); 
+        
+        
     }
     
     @FXML
