@@ -1,4 +1,4 @@
-package com;
+package com.motorista;
 
 public class Motorista {
     String CNH;
@@ -13,6 +13,10 @@ public class Motorista {
         this.setor = setor;
     }
 
+    public Motorista(){
+        
+    }
+    
     public String getCNH() {
         return CNH;
     }
@@ -43,5 +47,11 @@ public class Motorista {
 
     public void setSetor(String setor) {
         this.setor = setor;
+    }
+    
+    // necessário para exibir o nome corretamente no ComboBox 
+    @Override
+    public String toString() {
+        return nome; 
     }
 }

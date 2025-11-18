@@ -7,35 +7,35 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.usuario.GerenciarUsuarioController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.motorista.GerenciarMotoristasController">
    <children>
-      <ComboBox fx:id="comboUsuarios" layoutX="260.0" layoutY="69.0" prefHeight="39.0" prefWidth="384.0" />
-      <Text layoutX="351.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gerenciar Usuários">
+      <ComboBox fx:id="comboMotoristas" layoutX="260.0" layoutY="69.0" prefHeight="39.0" prefWidth="384.0" />
+      <Text layoutX="340.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gerenciar Motoristas">
          <font>
             <Font size="24.0" />
          </font>
       </Text>
-      <TextField fx:id="txtNome" layoutX="204.0" layoutY="162.0" prefHeight="51.0" prefWidth="495.0" promptText="Nome">
+      <TextField fx:id="txtCNH" layoutX="203.0" layoutY="155.0" prefHeight="51.0" prefWidth="495.0" promptText="CNH">
          <font>
             <Font size="24.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtLogin" layoutX="204.0" layoutY="235.0" prefHeight="51.0" prefWidth="495.0" promptText="Login">
+      <TextField fx:id="txtEndereco" layoutX="203.0" layoutY="278.0" prefHeight="51.0" prefWidth="495.0" promptText="Endereço">
          <font>
             <Font size="24.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtSenha" layoutX="203.0" layoutY="313.0" prefHeight="51.0" prefWidth="495.0" promptText="Senha">
+      <TextField fx:id="txtSetor" layoutX="203.0" layoutY="344.0" prefHeight="51.0" prefWidth="495.0" promptText="Setor">
          <font>
             <Font size="24.0" />
          </font>
       </TextField>
-      <Button layoutX="406.0" layoutY="456.0" mnemonicParsing="false" onAction="#editarUsuario" prefHeight="51.0" prefWidth="89.0" text="Editar">
+      <Button layoutX="406.0" layoutY="456.0" mnemonicParsing="false" onAction="#editarMotorista" prefHeight="51.0" prefWidth="89.0" text="Editar">
          <font>
             <Font size="17.0" />
          </font>
       </Button>
-      <Button layoutX="602.0" layoutY="456.0" mnemonicParsing="false" onAction="#excluirUsuario" prefHeight="51.0" prefWidth="97.0" text="Excluir">
+      <Button layoutX="602.0" layoutY="456.0" mnemonicParsing="false" onAction="#excluirMotorista" prefHeight="51.0" prefWidth="97.0" text="Excluir">
          <font>
             <Font size="17.0" />
          </font>
@@ -45,5 +45,10 @@
             <Font size="17.0" />
          </font>
       </Button>
+      <TextField fx:id="txtNome" layoutX="203.0" layoutY="216.0" prefHeight="51.0" prefWidth="495.0" promptText="Nome">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
    </children>
 </AnchorPane>

@@ -1,4 +1,4 @@
-package com.usuario;
+package com.motorista;
 
 import com.App;
 import com.Dao;
@@ -13,81 +13,94 @@ import javafx.scene.control.TextField;
  *  Precisei escrever as funções dos códigos pois já estava complexo e confuso
  */
 
-public class GerenciarUsuarioController {
+public class GerenciarMotoristasController {
 
     @FXML
-    private ComboBox<Usuario> comboUsuarios;
+    private ComboBox<Motorista> comboMotoristas;
 
+    @FXML
+    private TextField txtCNH;
     @FXML
     private TextField txtNome;
     @FXML
-    private TextField txtLogin;
+    private TextField txtEndereco;
     @FXML
-    private TextField txtSenha;
+    private TextField txtSetor;
 
-    private Dao<Usuario> dao = new Dao<>(Usuario.class);
-    private ObservableList<Usuario> usuarios = FXCollections.observableArrayList();
+    private Dao<Motorista> dao = new Dao<>(Motorista.class);
+    private ObservableList<Motorista> motoristas = FXCollections.observableArrayList();
 
     @FXML
     public void initialize() {
         // Carrega todos os usuários do Mongo
-        usuarios.addAll(dao.listarTodos());
-        comboUsuarios.setItems(usuarios);
+        motoristas.addAll(dao.listarTodos());
+        comboMotoristas.setItems(motoristas);
 
         // Atualiza campos ao selecionar usuário
-        comboUsuarios.setOnAction(event -> {
-            Usuario selecionado = comboUsuarios.getSelectionModel().getSelectedItem();
-            carregarUsuario(selecionado);
+        comboMotoristas.setOnAction(event -> {
+            Motorista selecionado = comboMotoristas.getSelectionModel().getSelectedItem();
+            carregarMotorista(selecionado);
         }); 
     }
 
-    private void carregarUsuario(Usuario u) {
+    private void carregarMotorista(Motorista u) {
         if (u == null) return;
+        txtCNH.setText(u.getCNH());
         txtNome.setText(u.getNome());
-        txtLogin.setText(u.getLogin());
-        txtSenha.setText(u.getSenha());
+        txtEndereco.setText(u.getEndereco());
+        txtSetor.setText(u.getSetor());
+    }
+    
+    public void clearTxt(){
+        txtCNH.clear();
+        txtNome.clear();
+        txtEndereco.clear();
+        txtSetor.clear();
+
     }
     
     @FXML
-    private void editarUsuario() {
-        Usuario u = comboUsuarios.getSelectionModel().getSelectedItem();
+    private void editarMotorista() {
+        Motorista u = comboMotoristas.getSelectionModel().getSelectedItem();
         if (u == null) return;
         
         // Guardando o login antigo para quando atualizado o código funcionar para mais de um campo
-        String loginAntigo = u.getLogin();
+        String nomeAntigo = u.getNome();
 
         
         // Atualiza os dados do usuário selecionado
+        u.setCNH(txtCNH.getText());
         u.setNome(txtNome.getText());
-        u.setLogin(txtLogin.getText());
-        u.setSenha(txtSenha.getText());
-
+        u.setEndereco(txtEndereco.getText());
+        u.setSetor(txtSetor.getText());
+        
         // Atualiza no banco
-        dao.alterar("login", loginAntigo, u);
+        dao.alterar("nome", nomeAntigo, u);
 
         // Força atualização da ComboBox
-        comboUsuarios.setItems(null);
-        comboUsuarios.setItems(FXCollections.observableArrayList(dao.listarTodos()));
+        comboMotoristas.setItems(null);
+        comboMotoristas.setItems(FXCollections.observableArrayList(dao.listarTodos()));
 
-        System.out.println("Usuário atualizado: " + u);
+        motoristas.setAll(dao.listarTodos());
+        clearTxt();
+
+        System.out.println("Motorista atualizado: " + u);
     }
     
     @FXML
-    private void excluirUsuario() {
-        Usuario u = comboUsuarios.getSelectionModel().getSelectedItem();
+    private void excluirMotorista() {
+        Motorista u = comboMotoristas.getSelectionModel().getSelectedItem();
        
         if (u == null) return;
         // Exclui do banco
-        dao.excluir("login", u.getLogin());
+        dao.excluir("nome", u.getNome());
 
         // Remove da lista e limpa campos
-        usuarios.remove(u);
-        comboUsuarios.getSelectionModel().clearSelection();
-        txtNome.clear();
-        txtLogin.clear();
-        txtSenha.clear();
+        motoristas.remove(u);
+        comboMotoristas.getSelectionModel().clearSelection();
+        clearTxt();
 
-        System.out.println("Usuário excluído: " + u);
+        System.out.println("Motorista excluído: " + u);
     }
     
     @FXML

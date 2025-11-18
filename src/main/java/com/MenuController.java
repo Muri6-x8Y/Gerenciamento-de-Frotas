@@ -17,4 +17,20 @@ public class MenuController {
     public void switchToGerenciarUsuarios() throws IOException {
         App.setRoot("/com/telasUsuarios/" + "gerenciarUsuarios");
     }
+
+    public void switchToCadastroMotorista() throws IOException {
+        App.setRoot("cadastroMotorista");
+    }
+    
+    public void switchToListarMotoristas() throws IOException {
+        App.setRoot("listarMotoristas");
+    }
+
+    public void switchToGerenciarMotoristas() throws IOException {
+        App.setRoot("gerenciarMotoristas");
+    }
+    
+    
+    
+
 }
