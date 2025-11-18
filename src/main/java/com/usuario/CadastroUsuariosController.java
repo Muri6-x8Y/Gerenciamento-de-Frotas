@@ -7,7 +7,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 
 
-public class CadastroUsuarioController {
+public class CadastroUsuariosController {
     @FXML
     private TextField campoNome;
     @FXML

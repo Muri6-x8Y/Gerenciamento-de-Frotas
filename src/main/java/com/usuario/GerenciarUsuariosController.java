@@ -13,7 +13,7 @@ import javafx.scene.control.TextField;
  *  Precisei escrever as funções dos códigos pois já estava complexo e confuso
  */
 
-public class GerenciarUsuarioController {
+public class GerenciarUsuariosController {
 
     @FXML
     private ComboBox<Usuario> comboUsuarios;

@@ -7,7 +7,7 @@ public class MenuController {
      
     @FXML
     public void switchToCadastroUsuario() throws IOException {
-        App.setRoot("/com/telasUsuarios/" + "cadastroUsuarios");
+        App.setRoot("/com/telasUsuarios/" + "cadastrarUsuarios");
     }
     
     public void switchToListarUsuario() throws IOException {
@@ -19,7 +19,7 @@ public class MenuController {
     }
 
     public void switchToCadastroMotorista() throws IOException {
-        App.setRoot("/com/telasMotoristas/" + "cadastroMotorista");
+        App.setRoot("/com/telasMotoristas/" + "cadastrarMotorista");
     }
     
     public void switchToListarMotoristas() throws IOException {
@@ -30,7 +30,16 @@ public class MenuController {
         App.setRoot("/com/telasMotoristas/" + "gerenciarMotoristas");
     }
     
-    
-    
+    public void switchToCadastrarVeiculos() throws IOException {
+        App.setRoot("cadastrarVeiculo");
+    }
 
+    public void switchToListarVeiculos() throws IOException {
+        App.setRoot("listarVeiculos");
+    }
+
+    public void switchToGerenciarVeiculos() throws IOException {
+        App.setRoot("gerenciarVeiculos");
+    }
+    
 }
