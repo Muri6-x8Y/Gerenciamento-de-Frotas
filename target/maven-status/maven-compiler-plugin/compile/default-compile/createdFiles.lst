@@ -4,9 +4,9 @@ com\App.class
 com\Dao.class
 com\motorista\GerenciarMotoristasController.class
 com\usuario\CadastroUsuarioController.class
-com\motorista\ListarMotoristas.class
 com\motorista\CadastroMotoristaController.class
 com\usuario\ListarController.class
 com\MenuController.class
 com\motorista\Motorista.class
 com\usuario\GerenciarUsuarioController.class
+com\motorista\ListarMotoristasController.class

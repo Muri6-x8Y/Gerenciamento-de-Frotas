@@ -19,15 +19,15 @@ public class MenuController {
     }
 
     public void switchToCadastroMotorista() throws IOException {
-        App.setRoot("cadastroMotorista");
+        App.setRoot("/com/telasMotoristas/" + "cadastroMotorista");
     }
     
     public void switchToListarMotoristas() throws IOException {
-        App.setRoot("listarMotoristas");
+        App.setRoot("/com/telasMotoristas/" + "listarMotoristas");
     }
 
     public void switchToGerenciarMotoristas() throws IOException {
-        App.setRoot("gerenciarMotoristas");
+        App.setRoot("/com/telasMotoristas/" + "gerenciarMotoristas");
     }
     
     
