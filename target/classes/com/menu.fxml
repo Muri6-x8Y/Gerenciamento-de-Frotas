@@ -63,6 +63,14 @@
                   <MenuItem mnemonicParsing="false" onAction="#switchToGerenciarVeiculos" text="Gerenciar" />
           </items>
         </Menu>
+            <Menu mnemonicParsing="false" text="Gerenciar Frota">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#switchToCadastroUsuario" text="Registrar Retirada" />
+                  <MenuItem mnemonicParsing="false" onAction="#switchToListarUsuario" text="Registrar Devolução" />
+                  <MenuItem mnemonicParsing="false" onAction="#switchToGerenciarUsuarios" text="Histórico" />
+                  <MenuItem mnemonicParsing="false" onAction="#switchToGerenciarUsuarios" text="Buscar Por " />
+               </items>
+            </Menu>
       </menus>
     </MenuBar>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefWidth="670.0" VBox.vgrow="ALWAYS" />

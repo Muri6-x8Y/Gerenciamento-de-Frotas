@@ -1,5 +1,8 @@
-package com;
+package com.veiculo;
 
+import com.App;
+import com.Dao;
+import com.Veiculo;
 import java.io.IOException;
 import java.util.List;
 import javafx.collections.FXCollections;
