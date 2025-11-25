@@ -1,6 +1,4 @@
-package com;
-
-
+package com.veiculo;
 
 /**
  *

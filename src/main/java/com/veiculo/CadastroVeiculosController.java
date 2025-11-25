@@ -1,11 +1,7 @@
 package com.veiculo;
 
-import com.usuario.*;
-import com.App;
 import com.App;
 import com.Dao;
-import com.Dao;
-import com.Veiculo;
 import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;

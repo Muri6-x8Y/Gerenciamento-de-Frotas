@@ -31,15 +31,15 @@ public class MenuController {
     }
     
     public void switchToCadastrarVeiculos() throws IOException {
-        App.setRoot("cadastrarVeiculo");
+        App.setRoot("/com/telasVeiculos/" + "cadastrarVeiculo");
     }
 
     public void switchToListarVeiculos() throws IOException {
-        App.setRoot("listarVeiculos");
+        App.setRoot("/com/telasVeiculos/" + "listarVeiculos");
     }
 
     public void switchToGerenciarVeiculos() throws IOException {
-        App.setRoot("gerenciarVeiculos");
+        App.setRoot("/com/telasVeiculos/" + "gerenciarVeiculos");
     }
     
 }

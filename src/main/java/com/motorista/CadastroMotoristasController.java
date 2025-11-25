@@ -2,7 +2,6 @@ package com.motorista;
 
 import com.App;
 import com.Dao;
-import com.usuario.Usuario;
 import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;

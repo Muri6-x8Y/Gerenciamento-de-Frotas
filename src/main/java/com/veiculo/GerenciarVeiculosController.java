@@ -2,7 +2,6 @@ package com.veiculo;
 
 import com.App;
 import com.Dao;
-import com.Veiculo;
 import java.io.IOException;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

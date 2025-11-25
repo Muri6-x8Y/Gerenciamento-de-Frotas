@@ -1,6 +1,5 @@
 com\usuario\CadastroUsuariosController.class
 com\usuario\Usuario.class
-com\Veiculo.class
 com\veiculo\GerenciarVeiculosController.class
 com\App.class
 com\Dao.class
@@ -10,6 +9,7 @@ com\MenuController.class
 com\usuario\GerenciarUsuariosController.class
 com\motorista\CadastroMotoristasController.class
 com\veiculo\listarVeiculosController.class
+com\veiculo\Veiculo.class
 com\veiculo\CadastroVeiculosController.class
 com\motorista\Motorista.class
 com\motorista\ListarMotoristasController.class
