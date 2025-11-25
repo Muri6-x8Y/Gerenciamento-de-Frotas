@@ -41,5 +41,5 @@ public class MenuController {
     public void switchToGerenciarVeiculos() throws IOException {
         App.setRoot("/com/telasVeiculos/" + "gerenciarVeiculos");
     }
-    
+ 
 }
