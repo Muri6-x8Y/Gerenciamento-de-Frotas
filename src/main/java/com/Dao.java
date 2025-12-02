@@ -120,5 +120,15 @@ public class Dao <T> {
         resultados.into(retorno);
         return retorno;
     }
+    
+    public List<T> filtrar(String campoDaColecao, boolean criterio) {
+    Bson filtro = Filters.eq(campoDaColecao, criterio);
+    FindIterable<T> resultados = collection.find(filtro);
+
+    List<T> retorno = new ArrayList<>();
+    resultados.into(retorno);
+    return retorno;
+    
+    }
 
 }

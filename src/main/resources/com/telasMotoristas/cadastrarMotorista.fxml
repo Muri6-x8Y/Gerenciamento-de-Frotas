@@ -38,37 +38,57 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.motorista.CadastroMotoristasController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.motorista.CadastroMotoristasController">
    <children>
-      <Text layoutX="325.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastrar usuário" wrappingWidth="250.13671875">
+      <Text layoutX="475.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastrar usuário" wrappingWidth="250.13671875">
          <font>
             <Font size="31.0" />
          </font>
       </Text>
-      <TextField fx:id="campoNome" layoutX="226.0" layoutY="200.0" prefHeight="50.0" prefWidth="448.0" promptText="Nome">
+      <TextField fx:id="campoNome" layoutX="376.0" layoutY="282.0" prefHeight="50.0" prefWidth="448.0" promptText="Nome">
          <font>
             <Font size="23.0" />
          </font></TextField>
-      <TextField fx:id="campoEndereco" layoutX="226.0" layoutY="263.0" prefHeight="51.0" prefWidth="448.0" promptText="Endereço">
+      <TextField fx:id="campoEndereco" layoutX="376.0" layoutY="366.0" prefHeight="51.0" prefWidth="448.0" promptText="Endereço">
          <font>
             <Font size="24.0" />
          </font></TextField>
-      <TextField fx:id="campoSetor" layoutX="226.0" layoutY="330.0" prefHeight="51.0" prefWidth="448.0" promptText="Setor">
+      <TextField fx:id="campoSetor" layoutX="376.0" layoutY="452.0" prefHeight="51.0" prefWidth="448.0" promptText="Setor">
          <font>
             <Font size="24.0" />
          </font></TextField>
-      <Button layoutX="575.0" layoutY="464.0" mnemonicParsing="false" onAction="#Cadastrar" prefHeight="51.0" prefWidth="99.0" text="Cadastrar">
+      <Button layoutX="775.0" layoutY="619.0" mnemonicParsing="false" onAction="#Cadastrar" prefHeight="51.0" prefWidth="99.0" text="Cadastrar">
          <font>
             <Font size="17.0" />
          </font></Button>
-      <Button layoutX="226.0" layoutY="464.0" mnemonicParsing="false" onAction="#Exit" prefHeight="51.0" prefWidth="99.0" text="Sair">
+      <Button layoutX="327.0" layoutY="619.0" mnemonicParsing="false" onAction="#Exit" prefHeight="51.0" prefWidth="99.0" text="Sair">
          <font>
             <Font size="17.0" />
          </font></Button>
-      <TextField fx:id="campoCNH" layoutX="226.0" layoutY="134.0" prefHeight="51.0" prefWidth="448.0" promptText="CNH">
+      <TextField fx:id="campoCNH" layoutX="376.0" layoutY="194.0" prefHeight="51.0" prefWidth="448.0" promptText="CNH">
          <font>
             <Font size="24.0" />
          </font>
       </TextField>
+      <Text layoutX="377.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CNH:" wrappingWidth="250.13671875">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="377.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome:" wrappingWidth="250.13671875">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="377.0" layoutY="358.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Endereço:" wrappingWidth="250.13671875">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="377.0" layoutY="443.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Setor:" wrappingWidth="250.13671875">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>

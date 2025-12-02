@@ -81,7 +81,7 @@ public class GerenciarVeiculosController {
 
         veiculos.setAll(dao.listarTodos());
         clearTxt();
-
+        
         System.out.println("Veiculo atualizado: " + u);
     }
     
@@ -98,6 +98,9 @@ public class GerenciarVeiculosController {
         comboVeiculos.getSelectionModel().clearSelection();
         clearTxt();
 
+        comboVeiculos.setItems(null);
+        comboVeiculos.setItems(FXCollections.observableArrayList(dao.listarTodos()));
+        
         System.out.println("Veiculo excluído: " + u);
     }
     

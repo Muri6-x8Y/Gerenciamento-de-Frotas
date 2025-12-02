@@ -9,13 +9,23 @@ public class Veiculo {
     private String placa;        
     private String marca;  
     private String modelo; 
-
+    private Boolean disponivel;
+    
     public Veiculo() {
         this.placa = "";
         this.marca = "";
         this.modelo = "";
+        this.disponivel = true;
     }
-   
+
+    public Boolean getDisponivel() {
+        return disponivel;
+    }
+
+    public void setDisponivel(Boolean disponivel) {
+        this.disponivel = disponivel;
+    }
+
     public Veiculo(String placa, String marca, String modelo) {
         this.placa = placa;
         this.marca = marca;

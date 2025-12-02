@@ -41,5 +41,17 @@ public class MenuController {
     public void switchToGerenciarVeiculos() throws IOException {
         App.setRoot("/com/telasVeiculos/" + "gerenciarVeiculos");
     }
- 
+   
+    public void switchToRegistrarRetirada() throws IOException {
+        App.setRoot("/com/telasGerenciamentoDeFrotas/" + "telaRetirada");
+    }
+    
+    public void switchToRegistrarDevolucao() throws IOException {
+        App.setRoot("/com/telasGerenciamentoDeFrotas/" + "telaDevolucao");
+    }
+    
+    public void switchToListarFrota () throws IOException {
+        App.setRoot("/com/telasGerenciamentoDeFrotas/" + "telaListaFrota");
+    }
+
 }
