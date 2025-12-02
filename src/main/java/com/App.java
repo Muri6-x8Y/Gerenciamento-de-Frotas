@@ -17,7 +17,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("menu"), 1200, 750);
+        scene = new Scene(loadFXML("/com/telasImportantes/" + "telaLogin"), 1200, 750);
         stage.setScene(scene);
         stage.show();
     }

@@ -12,6 +12,7 @@ com\frota\FrotaListar.class
 com\usuario\GerenciarUsuariosController.class
 com\motorista\CadastroMotoristasController.class
 com\veiculo\listarVeiculosController.class
+com\LoginController.class
 com\veiculo\Veiculo.class
 com\veiculo\CadastroVeiculosController.class
 com\motorista\Motorista.class

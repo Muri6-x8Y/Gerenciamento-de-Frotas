@@ -100,7 +100,7 @@ public class FrotaListar {
     }
     
    public void voltar()throws IOException{
-        App.setRoot("menu");
+        App.setRoot("/com/telasImportantes/" + "menu");
         return;
     }
 }

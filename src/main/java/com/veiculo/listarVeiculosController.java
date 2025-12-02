@@ -36,7 +36,7 @@ public class listarVeiculosController {
 
     @FXML
     private void Sair() throws IOException {
-        App.setRoot("menu");
+        App.setRoot("/com/telasImportantes/" + "menu");
     }
 
 }

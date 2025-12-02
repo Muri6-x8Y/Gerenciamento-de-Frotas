@@ -1,6 +1,12 @@
 package com.motorista;
 
+import java.util.List;
+
 public class Motorista {
+
+    static void setAll(List<Motorista> listarTodos) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     String CNH;
     String nome;
     String endereco;

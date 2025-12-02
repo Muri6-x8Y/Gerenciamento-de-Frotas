@@ -78,13 +78,16 @@ public class GerenciarMotoristasController {
         dao.alterar("nome", nomeAntigo, u);
 
         // Força atualização da ComboBox
-        comboMotoristas.setItems(null);
-        comboMotoristas.setItems(FXCollections.observableArrayList(dao.listarTodos()));
-
-        motoristas.setAll(dao.listarTodos());
+        atualizarComboBox();
         clearTxt();
 
         System.out.println("Motorista atualizado: " + u);
+    }
+    
+    private void atualizarComboBox(){
+        comboMotoristas.setItems(null);
+        comboMotoristas.setItems(FXCollections.observableArrayList(dao.listarTodos()));
+        motoristas.setAll(dao.listarTodos());
     }
     
     @FXML
@@ -98,6 +101,7 @@ public class GerenciarMotoristasController {
         // Remove da lista e limpa campos
         motoristas.remove(u);
         comboMotoristas.getSelectionModel().clearSelection();
+        atualizarComboBox();
         clearTxt();
 
         System.out.println("Motorista excluído: " + u);
@@ -105,6 +109,6 @@ public class GerenciarMotoristasController {
     
     @FXML
     private void sair() throws IOException{
-        App.setRoot("menu");
+        App.setRoot("/com/telasImportantes/" + "menu");
     }
 }

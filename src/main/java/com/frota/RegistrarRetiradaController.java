@@ -106,7 +106,7 @@ private void atualizarListas() {
     }
 
     public void voltar() throws IOException {
-        App.setRoot("menu");
+        App.setRoot("/com/telasImportantes/" + "menu");
     }
 
     private void alerta(String titulo, String msg) {

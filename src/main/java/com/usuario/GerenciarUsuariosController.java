@@ -64,34 +64,41 @@ public class GerenciarUsuariosController {
 
         // Atualiza no banco
         dao.alterar("login", loginAntigo, u);
-
-        // Força atualização da ComboBox
-        comboUsuarios.setItems(null);
-        comboUsuarios.setItems(FXCollections.observableArrayList(dao.listarTodos()));
-
+        
+        atualizarComboBox();
+        refresh();
+        
         System.out.println("Usuário atualizado: " + u);
+    }
+    
+    private void refresh(){
+        txtNome.clear();
+        txtLogin.clear();
+        txtSenha.clear();
+
     }
     
     @FXML
     private void excluirUsuario() {
         Usuario u = comboUsuarios.getSelectionModel().getSelectedItem();
-       
         if (u == null) return;
-        // Exclui do banco
+        
         dao.excluir("login", u.getLogin());
 
-        // Remove da lista e limpa campos
-        usuarios.remove(u);
-        comboUsuarios.getSelectionModel().clearSelection();
-        txtNome.clear();
-        txtLogin.clear();
-        txtSenha.clear();
+        atualizarComboBox();
+        refresh();
 
-        System.out.println("Usuário excluído: " + u);
+        System.out.println("Usuário excluído!");
+    }
+
+    private void atualizarComboBox() {
+        usuarios.setAll(dao.listarTodos());
+        comboUsuarios.setItems(usuarios);
+        comboUsuarios.getSelectionModel().clearSelection();
     }
     
     @FXML
     private void sair() throws IOException{
-        App.setRoot("menu");
+        App.setRoot("/com/telasImportantes/" + "menu");
     }
 }

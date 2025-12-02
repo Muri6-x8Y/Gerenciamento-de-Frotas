@@ -35,7 +35,7 @@ public class CadastroUsuariosController {
     
     @FXML
     private void Exit() throws IOException {
-        App.setRoot("menu");
+        App.setRoot("/com/telasImportantes/" + "menu");
     }
     
 

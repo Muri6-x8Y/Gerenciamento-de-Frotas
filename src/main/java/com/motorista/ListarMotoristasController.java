@@ -42,7 +42,7 @@ public class ListarMotoristasController {
 
     @FXML
     private void Sair() throws IOException {
-        App.setRoot("menu");
+        App.setRoot("/com/telasImportantes/" + "menu");
     }
 
 }

@@ -106,6 +106,6 @@ public class GerenciarVeiculosController {
     
     @FXML
     private void sair() throws IOException{ 
-        App.setRoot("menu");
+        App.setRoot("/com/telasImportantes/" + "menu");
     }
 }
